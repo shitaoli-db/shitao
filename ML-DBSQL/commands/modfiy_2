@@ -1,0 +1,18 @@
+curl -X POST -H "Authorization: Bearer dapia188247e2a2877a744c9b252e4754075" \
+  -H 'Content-Type: application/json' \
+  -H 'X-Databricks-Allow-Internal: true' \
+  https://dbc-872944df-e35c.dev.databricks.com/api/2.0/sql/endpoints/778eb116d5997a2d/edit \
+  -d '{
+    "confs": { 
+      "conf_pairs": {
+        "spark.databricks.pyspark.isolatedPandasUDF.enabled": "true",
+        "spark.databricks.pyspark.isolatedUDF.enabled": "true",
+        "spark.databricks.pyspark.sparkisolation.enabled": "true",
+        "spark.databricks.sql.pythonUDF.enabled": "true",
+        "spark.databricks.driverNfs.enabled": "true"
+      },
+      "test_overrides": {
+        "runtime_version": "custom:custom-local__12.x-snapshot-scala2.12__unknown__ml-29165__fc7509a__2ef60c8__shitao.li__4ea46e1__format-2"
+        }
+    }
+}'

@@ -1,0 +1,1 @@
+bin/testshard create -c dev-aws-us-east-1 -n shitao-uc-serverless --metastore-enabled --nephos --enable-uc -m LKG

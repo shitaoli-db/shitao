@@ -1,0 +1,28 @@
+curl -X POST https://e2-dogfood.staging.cloud.databricks.com/api/2.0/sql/endpoints/ \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer dapid6936bf0b3e4de96d05e273c41fe3f5f" \
+-d '{
+  "name": "shitao-udf-test",
+  "size": "LARGE",
+  "max_num_clusters": 1,
+  "tags" : {
+    "custom_tags": [
+      {
+        "key": "PythonUDF.enable",
+        "value": "true"
+      }
+    ]
+  },
+  "enable_serverless_compute": "true",
+  "conf_pairs": {
+    "spark.databricks.sqlservice.history.debugLogging": true
+  },
+  "test_overrides": {
+    "runtime_version": "custom:custom-local__13.x-snapshot-scala2.12__unknown__head__c64bc11__e230133__jenkins__0a028d5__format-2.lz4",
+    "cluster_attributes": {
+      "spark_conf": {
+        "spark.databricks.sqlservice.history.debugLogging": true
+      }
+    }
+  }
+}'

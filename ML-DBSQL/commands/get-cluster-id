@@ -1,0 +1,3 @@
+curl -X GET https://dbc-872944df-e35c.dev.databricks.com/api/2.0/sql/endpoints/endpoint-778eb116d5997a2d?debug=true \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer dapia188247e2a2877a744c9b252e4754075" \
